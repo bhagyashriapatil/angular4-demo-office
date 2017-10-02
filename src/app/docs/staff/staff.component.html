@@ -1,0 +1,26 @@
+<div class="col-sm-12">
+  <div class="col-sm-9">
+  <table class="table table-hover">
+      <thead>
+            <tr>
+                <th colspan="2">
+                   <h4 class="col-md-12 text-center limegreen">Staff View(One child in docs component)</h4>
+                </th>
+             </tr>
+          <tr>
+            <th>Employee's Name</th>
+            <th>Check for suggested Project</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of staffData; let index=index;">
+            <td>{{ data.name }}</td>
+            <td><a class="cursor" (click)="showClient(data, index)">Suggested Project?</a></td>
+          </tr>
+        </tbody>
+      </table>
+   </div>
+   <div class="col-sm-3">
+      <button class="btn btn-info pull-right" routerLink="/docs/client">Go to client</button>
+    </div>
+  </div>

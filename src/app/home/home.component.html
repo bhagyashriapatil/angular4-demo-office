@@ -1,0 +1,35 @@
+<div class="col-sm-9 col-sm-offset-2">
+        <div class="page-header col-sm-12 text-center"><b>{{pageTitle}}</b></div>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th class="col-md-2">Email</th>
+              <th class="col-md-2">First Name</th>
+              <th class="col-md-2">Last Name</th>
+              <th class="col-md-2">Language</th>
+              <!-- <th>Password</th> -->
+              <th class="col-md-1">Ratings</th>
+              <th class="col-md-3"> Actions</th>
+            </tr>
+          </thead>  
+          <tbody>
+              <!-- <tr *ngFor="let data of userList;let index=index;"> -->
+              <tr *ngFor="let data of userList;let index=index;">
+                  <td><span>{{data.email}}</span></td>
+                  <td><span>{{data.firstName}}</span></td>
+                  <td><span>{{data.lastName}}</span></td>
+                  <td><span>{{data.language}}</span></td>
+                  <!-- <td><span>{{data.password}}</span></td> -->
+                  <!-- <td><span>{{data.ratings}}</span></td> -->
+                  <td>
+                    <app-star [rating]="data.rating" (ratingClicked)="onRatingClicked($event)"></app-star>
+                  </td>
+                  <td><span><button class="btn btn-sm btn-success pull-left" (click)="update(data,index)">Update</button>
+                    <button type="button" class="btn btn-sm btn-danger pull-right"
+                    popoverTitle="Are you sure to Delete?"
+                    popover="If Yes, Click to Delete."
+                    placement="left" (click)="delete(index)" triggers="mouseenter:mouseleave">Delete</button></span></td>
+                </tr>
+          </tbody>  
+        </table>
+      </div>
