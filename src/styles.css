@@ -23,14 +23,20 @@
   .mt10{
     margin-top: 10px;
   }
+  .mt5{
+    margin-top: 5px;
+  }
   .fc-top-17 {
     top: 17px;
     position: relative;
   }
   .has-danger .form-control{
-    border: 1px solid red;
+    border: 1px solid rgba(255, 0, 0, 0.59);
+    box-shadow: 3px 3px 4px 0px rgba(222, 110, 110, 0.63);
   }
-  
+  .alert-danger{
+    background: transparent;
+  }
   .form-control-feedback{
     position: absolute;
     top: 19px;
@@ -53,8 +59,8 @@
   .close{
     opacity: 1.2!important;
   }
-  .modal-header{
-    background: #f6f7f9;
+  .modal-header {
+    background: rgba(196, 239, 235, 0.82);
   }
   .nomarbtm{
     margin-bottom: 0px;
@@ -71,3 +77,14 @@
   ul.dropdown-menu li{
     border-bottom: 1px solid #efebeb; 
   }
+  .text-gray{
+    color: gray;
+  }
+  .text-info{
+    color: green;
+  }
+  .page-header>span{
+    font-weight: 700;
+    font-size: 18px;
+  }
+ 

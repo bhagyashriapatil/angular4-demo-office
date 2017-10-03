@@ -27,11 +27,10 @@ export class TemplateDrivenLoginComponent implements OnInit {
       // set localstorage using "currentUser" token
       localStorage.setItem('currentUser',JSON.stringify(res.data));
       // check token is exist or not
-      this.loginService.getUsers()
-      .subscribe(res=>{
-        console.log("res in getusers",res);
-        
-      })
+      // this.loginService.getUsers()
+      // .subscribe(res=>{
+      //   // console.log("res in getusers",res);
+      // })
       
       if(this.loginService.getUserLoggedIn()){
         this.router.navigate(['home']);

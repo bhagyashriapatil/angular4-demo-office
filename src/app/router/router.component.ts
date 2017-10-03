@@ -26,6 +26,7 @@ export const appRoutes: Routes = [
     { path: 'signup', component: SignupComponent },
     { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
 
+    // ngx routes start
     { path: 'tooltip', component: TooltipComponent },
     { path: 'modal', component: ModalComponent },
     { path: 'typehead', component: TypeheadComponent },
@@ -40,12 +41,13 @@ export const appRoutes: Routes = [
     { path: 'progressbar', component: ProgressbarComponent },
     { path: 'sortable', component: SortableComponent },
     { path: 'tabs', component: TabsComponent },
+    // ngx routes end
 
     { path: '',
       redirectTo: '/login',
       pathMatch: 'full'
     },
-    { path: '**', component: PagenotfoundComponent }
+    { path: '**', component: PagenotfoundComponent }       //wild card route
 ]
 
 export const routing = RouterModule.forRoot(appRoutes)

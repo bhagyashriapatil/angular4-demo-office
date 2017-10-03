@@ -12,3 +12,53 @@
        top: 61px;
        position: relative;
    }
+
+   .nav-shadow{
+    box-shadow: 1px 1px 12px;
+    background: white;
+   }
+
+   .btn-border{
+    background: white;
+    border: 1px solid #c7c1c1;
+   }
+   .btn-border:hover{
+    background: rgba(146, 146, 236, 0.82);
+    border: 1px solid #cecaca;
+    color: white;
+    transition: 0.3s linear;
+   }
+    .navbar-default .navbar-nav>li:not(:last-child):hover{
+    background: rgba(201, 217, 241, 0.82);
+    color: white;
+    transition: 0.3s linear;
+   }
+   
+   .navbar-default .navbar-nav>li>a.Active{
+    background: rgba(10, 181, 232, 0.32);
+    color: white;
+   }
+   .navbar-default .navbar-nav>li>a{
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+   }
+   .navbar-default .navbar-nav>li>a{
+    color: black;
+    background-color: transparent;
+    letter-spacing: .15em;
+    text-shadow: 0px 1px 0 #767676, -1px 2px 1px rgb(115, 114, 114), -2px 4px 1px #767474, -3px 7px 1px #787777, -4px 4px 1px rgba(123, 122, 122, 0), -2px 2px 1px #7f7d7d;
+    }
+    ul.dropdown-menu>li>a.Active{
+        background: rgba(10, 181, 232, 0.32);
+        color: white;
+    }
+   /* .dropdown-menu.navbar-nav>li>:hover{
+    background: white;
+   }
+   .dropdown-menu.navbar-nav>li>a.Active{
+    background: rgba(146, 146, 236, 0.82);
+    color: white;
+   } */
+   

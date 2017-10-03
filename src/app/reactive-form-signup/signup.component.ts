@@ -54,7 +54,8 @@ export class SignupComponent implements OnInit {
       this.rating = new FormControl('', Validators.required);
       this.password = new FormControl('', [
       Validators.required,
-      Validators.minLength(5)
+      Validators.minLength(4),
+      Validators.maxLength(10)
       ]);
       this.language = new FormControl('', Validators.required);
   }

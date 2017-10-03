@@ -73,7 +73,7 @@ export class HomeComponent implements OnInit {
   delete(index) {
     this.userService.deleteUser(index)
     .subscribe(res=>{
-      this.userList = res
+      this.userList = res.message;
     })
   }
 

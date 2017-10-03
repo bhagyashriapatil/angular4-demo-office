@@ -20,6 +20,7 @@ export class UpdatemodalComponent implements OnInit {
   constructor(public bsModalRef: BsModalRef, private modalService: BsModalService) { 
     this.userData = this.modalService.config;
     this.updateData = Object.assign({},this.userData.user.data);
+    console.log("updateData",this.updateData)
     
     this.index = this.userData.user.index;
   }
@@ -33,7 +34,7 @@ export class UpdatemodalComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.data = this.bsModalRef.conten;
+    // this.data = this.bsModalRef.content;
     // console.log("data",this.modalService.config);
  }
 

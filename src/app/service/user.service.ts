@@ -19,7 +19,7 @@ export class UserService {
 
   deleteUser(index): Observable<any>{
     return this.http.delete('http://localhost:3002/delete/'+ index )
-    .map((res:Response)=>{res.json()})
+    .map((res:Response)=>{return res.json()})
     .catch((error: any)=> Observable.throw(error.json().error||'Server error'));
   }
 

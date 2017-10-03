@@ -14,20 +14,26 @@ export class StaffComponent implements OnInit {
     this.staffData = [
       {
         "id":0,
-        "name": "Rajshree Patil",
-        "email": "raj@zymr.com",
+        "name": "Deepak",
+        "email": "deepak@zymr.com",
         "project": "10i"
       },
       {
         "id":1,
-        "name": "Bhagyashri Patil",
+        "name": "Sneha",
+        "email": "sneha@zymr.com",
+        "project": "LIS"
+      },
+      {
+        "id":2,
+        "name": "Bhagyashri",
         "email": "bhagyashri@zymr.com",
         "project": "NFL"
       },
       {
-        "id":2,
-        "name": "Dnyaneshwari Patil",
-        "email": "dnyaneshwari@zymr.com",
+        "id":3,
+        "name": "Shewta",
+        "email": "shewta@zymr.com",
         "project": "LIS"
       }
     ];

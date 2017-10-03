@@ -1,5 +1,5 @@
 <div class="col-sm-9 col-sm-offset-2">
-        <div class="page-header col-sm-12 text-center"><b>{{pageTitle}}</b></div>
+        <div class="page-header col-sm-12 text-center"><span>{{pageTitle}}</span></div>
         <table class="table table-bordered">
           <thead>
             <tr>
@@ -24,10 +24,10 @@
                   <td>
                     <app-star [rating]="data.rating" (ratingClicked)="onRatingClicked($event)"></app-star>
                   </td>
-                  <td><span><button class="btn btn-sm btn-success pull-left" (click)="update(data,index)">Update</button>
-                    <button type="button" class="btn btn-sm btn-danger pull-right"
+                  <td><span><button class="btn btn-sm btn-success pull-left mr10" (click)="update(data,index)">Update</button>
+                    <button type="button" class="btn btn-sm btn-danger"
                     popoverTitle="Are you sure to Delete?"
-                    popover="If Yes, Click to Delete."
+                    popover="If Yes, then Click to Delete."
                     placement="left" (click)="delete(index)" triggers="mouseenter:mouseleave">Delete</button></span></td>
                 </tr>
           </tbody>  

@@ -1,5 +1,5 @@
 <div class="col-sm-4 col-sm-offset-4 well">
-    <div class="page-header nomartop text-center"><b>Signup Form</b></div>
+    <div class="page-header nomartop text-center"><span>Signup Form</span></div>
     <form [formGroup]="myform" novalidate (ngSubmit)="onSubmit()">
       <!-- <fieldset formGroupName="name"> -->
       <!-- <div class="col-sm-12 form-group" [ngClass]="{
@@ -56,11 +56,13 @@
               }">
               <label>Password</label>
               <input type="text" class="form-control" formControlName="password">
-              <div class="form-control-feedback col-sm-12" *ngIf="password.errors && (password.dirty ||
+              <div class="form-control-feedback alert-danger mt5 col-sm-12" *ngIf="password.errors && (password.dirty ||
               password.touched)">
                 <p *ngIf="password.errors.required">Password is required</p>
-                <p *ngIf="password.errors.minlength"><span>Password must be 8 characters long</span></p>
-              <!-- <p *ngIf="password.errors.minlength"><span>Password must be 8 characters long, we need
+                <p *ngIf="password.errors.minlength"><span>Password atleast 4 characters long</span></p>
+                <p *ngIf="password.errors.maxlength"><span>Password must be 10 characters long</span></p>
+              
+              <!-- <p *ngIf="password.errors.minlength"><span>Password must be 10 characters long, we need
                   another {{password.errors.minlength.requiredLength -
                   password.errors.minlength.actualLength}} characters</span> </p> -->
                   

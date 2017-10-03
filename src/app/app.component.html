@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default nav-shadow navbar-fixed-top">
   <div class="container-fluid nomarleft">
     
     <div class="navbar-header">
@@ -8,15 +8,15 @@
     <ul class="nav navbar-nav navbar-left">
         <li><a routerLink="/login" routerLinkActive="Active">Login</a></li>
         <li><a routerLink="/home" routerLinkActive="Active">Home</a></li>
-        <li><a routerLink="/docs" routerLinkActive="active">Docs</a></li>
+        <li><a routerLink="/docs" routerLinkActive="Active">Docs</a></li>
         <li><a routerLink="/signup" routerLinkActive="Active">Signup</a></li>
         <li dropdown tooltip="dd opened using ngx-dropdown" placement="right" 
         triggers="mouseenter:mouseleave">
             <a dropdownToggle (click)="false">Ngx Bootstrap
             <span class="caret"></span></a>
             <ul *dropdownMenu class="dropdown-menu">
-              <li><a routerLink="/accordion" routerLinkActive="active">Accordion</a></li>
-              <li><a routerLink="/alert" routerLinkActive="active">Alert</a></li>
+              <li><a routerLink="/accordion" routerLinkActive="Active">Accordion</a></li>
+              <li><a routerLink="/alert" routerLinkActive="Active">Alert</a></li>
               <li><a routerLink="/ngxbutton" routerLinkActive="Active">Button</a></li>
               <li><a routerLink="/ngxdropdown" routerLinkActive="Active">Dropdown</a></li>
               <li><a routerLink="/tooltip" routerLinkActive="Active">Tooltip</a></li>
@@ -32,7 +32,7 @@
             </ul>
           </li>
     </ul>
-      <button class="btn btn-sm btn-info pull-right mt10" (click)="logout()">Logout</button>
+      <button class="btn btn-sm btn-border pull-right mt10" (click)="logout()">Logout</button>
   </div>
 </nav>
 <div class="routeStyle">       
