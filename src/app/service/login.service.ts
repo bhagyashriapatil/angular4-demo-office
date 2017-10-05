@@ -11,7 +11,6 @@ export class LoginService {
 
   // add new signUp users
   setEmpList(data):Observable<any>{
-    debugger;
     let headers = new Headers({'Content-type':'application/json'});  // ... Set content type to JSON
     let options = new RequestOptions({ headers: headers});  // Create a request option
     return this.http.post('http://localhost:3002/signUp', data, options)
@@ -44,13 +43,14 @@ export class LoginService {
   };
 
   getUsers(): Observable<any>{
-    //   // url,body,headers
+  // url,body,headers
   // 1st way which is not working
   //  return this.http.get('http://localhost:3002/userList')
   //  .map((res:Response) => {
   //    return res.json();
   //  })
   //  .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+
   // 2nd updated way which is woarking now
   return Observable.create(observer => {
     this.http.get('http://localhost:3002/userList')

@@ -20,11 +20,13 @@ import { ProgressbarComponent } from '../ngx-bootstrap-demo/progressbar/progress
 import { SortableComponent } from '../ngx-bootstrap-demo/sortable/sortable.component';
 import { TabsComponent } from '../ngx-bootstrap-demo/tabs/tabs.component';
 import { DocComponent } from '../docs/doc/doc.component';
+import { ListResolver } from '../router/list.resolver';
+
 
 export const appRoutes: Routes = [
     { path: 'login', component: TemplateDrivenLoginComponent },
     { path: 'signup', component: SignupComponent },
-    { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+    { path: 'home', component: HomeComponent, canActivate: [AuthGuard], resolve: {user: ListResolver} },
 
     // ngx routes start
     { path: 'tooltip', component: TooltipComponent },

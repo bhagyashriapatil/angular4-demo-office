@@ -15,16 +15,15 @@ export class StarComponent implements OnInit {
   // pass clicked data to parent component from child comp
   @Output() ratingClicked: EventEmitter<string> = new EventEmitter<string>();
 
-
   constructor() { }
 
   // changes only input properties changes
   ngOnChanges(): void {
-    this.starWidth = this.rating * 86/5;
+    this.starWidth = this.rating * 85/5;
   }
 
   onClick(){
-    // Here i have used literls 
+    // Here I have used literls 
     this.ratingClicked.emit(`The rating ${this.rating} was clicked!`);
   }
 

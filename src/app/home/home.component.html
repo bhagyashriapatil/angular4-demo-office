@@ -13,7 +13,7 @@
             </tr>
           </thead>  
           <tbody>
-              <!-- <tr *ngFor="let data of userList;let index=index;"> -->
+              <!-- <tr *ngFor="let data of userList | async;let index=index;"> -->
               <tr *ngFor="let data of userList;let index=index;">
                   <td><span>{{data.email}}</span></td>
                   <td><span>{{data.firstName}}</span></td>
@@ -24,11 +24,15 @@
                   <td>
                     <app-star [rating]="data.rating" (ratingClicked)="onRatingClicked($event)"></app-star>
                   </td>
-                  <td><span><button class="btn btn-sm btn-success pull-left mr10" (click)="update(data,index)">Update</button>
-                    <button type="button" class="btn btn-sm btn-danger"
-                    popoverTitle="Are you sure to Delete?"
-                    popover="If Yes, then Click to Delete."
-                    placement="left" (click)="delete(index)" triggers="mouseenter:mouseleave">Delete</button></span></td>
+                  <td>
+                    <span>
+                      <button class="btn btn-sm btn-success pull-left mr10" (click)="update(data,index)">Update</button>
+                      <button type="button" class="btn btn-sm btn-danger"
+                       popoverTitle="Are you sure to Delete?"
+                       popover="If Yes, then Click to Delete."
+                       placement="left" (click)="delete(index)" triggers="mouseenter:mouseleave">Delete</button>
+                    </span>
+                  </td>
                 </tr>
           </tbody>  
         </table>

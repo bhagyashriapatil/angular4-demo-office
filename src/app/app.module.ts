@@ -12,6 +12,7 @@ import { PopoverModule, TooltipModule, ModalModule, TypeaheadModule, CollapseMod
 import { appRoutes } from './router/router.component';
 
 import { AuthGuard } from './auth.guard';
+import { ListResolver } from './router/list.resolver';
 
 import { AppComponent } from './app.component';
 import { TemplateDrivenLoginComponent } from './template-driven-login/template-driven-login.component';
@@ -101,7 +102,7 @@ import { UpdatemodalComponent } from './home/modals/updatemodal/updatemodal.comp
       { enableTracing: false } // <-- debugging purposes only
     )
   ],
-  providers: [ LoginService, AuthGuard ],
+  providers: [ ListResolver, LoginService, AuthGuard ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

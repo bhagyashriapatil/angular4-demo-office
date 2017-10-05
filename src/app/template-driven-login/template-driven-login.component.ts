@@ -12,13 +12,16 @@ export class TemplateDrivenLoginComponent implements OnInit {
 
   data: object;
 
-  // If you dont mention access specifier by default it is public
+  // If you don't mention access specifier by default it is public
   // When a member is marked private, it cannot be accessed from outside of its containing class
   constructor(private router: Router, private loginService: LoginService) {
+    
+    //set default data object
     this.data = {
       "email": "",
       "pwd": ""
-    }
+    };
+
   }
 
   login(data){
@@ -26,22 +29,19 @@ export class TemplateDrivenLoginComponent implements OnInit {
     .subscribe(res=>{
       // set localstorage using "currentUser" token
       localStorage.setItem('currentUser',JSON.stringify(res.data));
-      // check token is exist or not
-      // this.loginService.getUsers()
-      // .subscribe(res=>{
-      //   // console.log("res in getusers",res);
-      // })
       
+      // check token is exist or not
       if(this.loginService.getUserLoggedIn()){
         this.router.navigate(['home']);
       }
+
     },err=>{
       alert("Hey unauthorized user, Please enter valid credentials");
       return Observable.throw(err);
     })
-  }
+  };
   
   ngOnInit() {
-  }
+  };
 
 }

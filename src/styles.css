@@ -49,6 +49,9 @@
     text-align: left;
     pointer-events: none;
   }
+  .form-control-feedback p{
+    color: #a94442;
+  }
   .close-modal{
     border-color: 1px solid #4cae4c;
     padding: 0px 6px 0px 6px;

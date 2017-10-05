@@ -18,18 +18,19 @@ export class UpdatemodalComponent implements OnInit {
   newObj: any;
 
   constructor(public bsModalRef: BsModalRef, private modalService: BsModalService) { 
+    
     this.userData = this.modalService.config;
-    this.updateData = Object.assign({},this.userData.user.data);
-    console.log("updateData",this.updateData)
+
+    // this.updateData = this.userData.user.data;
+    this.updateData = Object.assign({},this.userData.user.data);  //same as angular.copy()
     
     this.index = this.userData.user.index;
+
   }
 
   update(recvdata){
-    this.newObj = {
-      data: recvdata
-    }
-    this.modalService.setDismissReason(this.newObj);
+    // pass updated object on modal dismissed, same as $dismiss in angularjs
+    this.modalService.setDismissReason(recvdata);
     this.bsModalRef.hide();   
   }
 
